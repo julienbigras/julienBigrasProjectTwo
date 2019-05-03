@@ -177,7 +177,7 @@ a {
   margin: 0 auto;
   max-width: 1600px; }
 
-header {
+header.indexHeader {
   background-image: url(../assets/headerImage.jpg);
   background-size: cover;
   height: 100vh; }
@@ -190,11 +190,31 @@ h1 {
   color: black;
   text-transform: uppercase; }
 
+h2 {
+  font-size: 42px;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  text-transform: uppercase; }
+
+h3,
+.links a {
+  font-size: 32px;
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-style: italic;
+  color: black;
+  text-transform: uppercase; }
+
 .boxImage {
   width: 40%;
   position: absolute;
   top: 2;
   right: 0; }
+
+.about {
+  text-align: center; }
 
 .skills,
 .newGear {
@@ -218,6 +238,17 @@ h1 {
   background-image: url(../assets/banner.jpg);
   background-size: cover;
   height: 70vh; }
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.profileLeft {
+  width: 25%; }
+
+.profileRight {
+  width: 70%; }
 
 .gallery {
   display: -webkit-box;
