@@ -147,7 +147,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 125%;
-  font-family: "sans-serif"; }
+  font-family: "serif"; }
 
 h1,
 h2,
@@ -206,7 +206,8 @@ nav ul {
     text-transform: uppercase;
     margin-left: 40px;
     padding-bottom: 10px; }
-  nav ul a:hover {
+  nav ul a:hover,
+  nav ul a:focus {
     border-bottom: 3px solid #4CEEA7; }
 
 button {
@@ -220,6 +221,10 @@ button {
   border: none;
   padding: 12px 18px;
   display: block; }
+  button:hover {
+    background-color: #12c275; }
+  button:focus {
+    background-color: #12c275; }
 
 header.headerHome {
   background-image: url(../assets/headerImage.jpg);
@@ -235,7 +240,6 @@ h1 {
   color: #2C2C2C;
   text-transform: uppercase;
   text-align: center;
-  z-index: 999;
   margin-top: 60vh; }
 
 h2 {
@@ -321,10 +325,46 @@ p {
   width: 90%;
   position: relative; }
 
+.skillsRight,
+.newGearLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .skillsContent,
 .newGearContent {
   width: 75%;
   margin: 0 auto; }
+  .skillsContent h3,
+  .skillsContent p,
+  .newGearContent h3,
+  .newGearContent p {
+    margin-bottom: 30px; }
+
+.newGearContent div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .skillsLeft div {
   -webkit-box-shadow: 35px 40px #FDFA69;
@@ -354,6 +394,8 @@ p {
 .links {
   background: #EFFDF3;
   padding: 70px 0 40px; }
+  .links ul div {
+    margin-right: 10px; }
 
 .links ul {
   display: -webkit-box;
@@ -375,6 +417,9 @@ p {
       -ms-flex-pack: center;
       justify-content: center; }
 
+.links p {
+  margin-top: 10px; }
+
 .iconBackground {
   color: #4CEEA7; }
 
@@ -384,13 +429,28 @@ p {
   height: 70vh; }
 
 .profile {
-  background: #EFFDF3;
-  height: 70vh; }
+  background: #EFFDF3; }
+  .profile .wrapper {
+    height: 70vh; }
+    .profile .wrapper p {
+      padding: 20px 0 40px; }
 
-.profile .wrapper {
+.profile .wrapper,
+.profileLeft,
+.profileRight {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .profileLeft {
   width: 25%; }

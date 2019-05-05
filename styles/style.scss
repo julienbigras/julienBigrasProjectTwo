@@ -14,7 +14,6 @@ header.headerHome {
 h1 {
     @include fontSize(6.9rem);
     text-align: center;
-    z-index: 999;
     margin-top: 60vh;
 }
 
@@ -81,11 +80,23 @@ p {
     position: relative;
 }
 
+.skillsRight,
+.newGearLeft {
+    @include flexContainer(column, center, center);
+}
+
 .skillsContent,
 .newGearContent {
-    // @include flexContainer(column, center, center);
     width: 75%;
     margin: 0 auto;
+        h3,
+        p {
+            margin-bottom: 30px;
+        }
+}
+
+.newGearContent div {
+    @include flexContainer(row, flex-end, center);
 }
 
 .skillsLeft div {
@@ -105,6 +116,9 @@ p {
 .links {
     background: $bgColor;
     padding: 70px 0 40px;
+        ul div {
+            margin-right: 10px;
+        }
 }
 
 .links ul {
@@ -121,6 +135,10 @@ p {
         }
 }
 
+.links p {
+    margin-top: 10px;
+}
+
 .iconBackground {
     color: $fillColor;
 }
@@ -133,11 +151,18 @@ p {
 
 .profile {
     background: $bgColor;
-    height: 70vh;
+    .wrapper {
+        height: 70vh;
+        p {
+            padding: 20px 0 40px;
+        }
+    }
 }
 
-.profile .wrapper {
-    display: flex;
+.profile .wrapper,
+.profileLeft,
+.profileRight {
+    @include flexContainer(row, center, center);
 }
 
 .profileLeft {

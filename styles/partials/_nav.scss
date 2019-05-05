@@ -10,7 +10,8 @@ nav ul {
             margin-left: 40px;
             padding-bottom: 10px;
         }
-        a:hover {
-            border-bottom: 3px solid #4CEEA7;
+        a:hover,
+        a:focus {
+            border-bottom: 3px solid $fillColor;
         }
 }

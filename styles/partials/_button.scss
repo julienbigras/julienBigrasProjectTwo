@@ -4,9 +4,16 @@ button {
     font-weight: bold;
     font-style: italic;
     font-size: 20px;
-    background-color: #4CEEA7;
+    background-color: $fillColor;
     color: black;
     border: none;
     padding: 12px 18px;
     display: block;
+    &:hover {
+        background-color: darken($fillColor, 20);
+    }
+    &:focus {
+        background-color: darken($fillColor, 20);
+    }
 }
+
