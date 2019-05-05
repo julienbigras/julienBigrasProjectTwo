@@ -1,43 +1,62 @@
 @import "partials/setup";
 @import "partials/generalStyles";
+@import "partials/mixins";
+@import "partials/nav";
+@import "partials/button";
 
-@mixin fontSize($sizeValue) {
-    font-size: $sizeValue;
-    font-family: "Playfair Display";
-    font-weight: bold;
-    font-style: italic;
-    color: black;
-    text-transform: uppercase;
-}
-
-header.indexHeader {
+header.headerHome {
     background-image: url(../assets/headerImage.jpg);
     background-size: cover;
     height: 100vh;
+    position: relative;
 }
 
 h1 {
-    @include fontSize(138px);
+    @include fontSize(6.9rem);
+    text-align: center;
+    z-index: 999;
+    margin-top: 60vh;
 }
 
 h2 {
-    @include fontSize(42px);
+    @include fontSize(2.1rem);
 }
 
 h3,
 .links a {
-    @include fontSize(32px);
+    @include fontSize(1.6rem);
+}
+
+p {
+    font-family: "Roboto";
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $black;
 }
 
 .boxImage {
-    width: 40%;
+    width: 35%;
     position: absolute;
-    top: 2;
     right: 0;
+    bottom: -120px;
+    border-top: 30px solid $shadowColor;
+    border-bottom: 30px solid $shadowColor;
+    border-left: 30px solid $shadowColor;
+    z-index: 10;
 }
 
 .about {
-    text-align: center;
+    background: $bgColor;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.aboutContent {
+    @include flexContainer(column, center, center);
+        p {
+            padding: 30px 0;
+        }
 }
 
 .skills,
@@ -56,6 +75,56 @@ h3,
     width: 50%;
 }
 
+.skillsLeft div,
+.newGearRight div {
+    width: 90%;
+    position: relative;
+}
+
+.skillsContent,
+.newGearContent {
+    // @include flexContainer(column, center, center);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.skillsLeft div {
+    @include boxShadow(35px, 40px);
+    bottom: 40px;
+}
+
+.newGearRight {
+    @include flexContainer(row, flex-end, center);
+}
+
+.newGearRight div {
+    @include boxShadow(-35px, 40px)
+    top: 40px;
+}
+
+.links {
+    background: $bgColor;
+    padding: 70px 0 40px;
+}
+
+.links ul {
+    display: flex;
+    flex-wrap: wrap;
+        li {
+            display: flex;
+            width: calc(50% - 20px);
+            margin: 35px 10px;
+                span {
+                    display: flex;
+                    justify-content: center;
+                }
+        }
+}
+
+.iconBackground {
+    color: $fillColor;
+}
+
 .backgroundImage {
     background-image: url(../assets/banner.jpg);
     background-size: cover;
@@ -63,22 +132,38 @@ h3,
 }
 
 .profile {
+    background: $bgColor;
+    height: 70vh;
+}
+
+.profile .wrapper {
     display: flex;
 }
 
 .profileLeft {
     width: 25%;
+        div {
+            @include boxShadow(35px, 40px);
+        }
 }
 
 .profileRight {
     width: 70%;
+    padding-left: 10%;
 }
 
 .gallery {
-    display: flex;
-    justify-content: space-between;
+    @include flexContainer(row, space-between, center);
         div {
             width: calc(33% - 20px);
             padding: 40px 0;
     }
+}
+
+footer {
+    background: $black;
+        p {
+            color: white;
+            text-align: center;
+        }
 }

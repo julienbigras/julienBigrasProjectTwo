@@ -1,0 +1,16 @@
+nav {
+    @include flexContainer(row, flex-end, center)
+}
+
+nav ul {
+    display: flex;
+    margin-top: 20px;
+        a {
+            @include fontSize(20px);
+            margin-left: 40px;
+            padding-bottom: 10px;
+        }
+        a:hover {
+            border-bottom: 3px solid #4CEEA7;
+        }
+}

@@ -1,0 +1,19 @@
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;
+    color: $black;
+    text-transform: uppercase;
+}
+
+@mixin flexContainer($flexD, $jCon, $align) {
+    display: flex;
+    flex-direction: $flexD;
+    justify-content: $jCon;
+    align-items: $align;
+}
+
+@mixin boxShadow($x, $y) {
+    box-shadow: $x $y $shadowColor;
+}

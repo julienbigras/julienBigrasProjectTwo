@@ -11,27 +11,31 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="indexHeader">
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="blog.html">blog</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-        <h1>captured</h1>
+    <header class="headerHome">
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="boxImage">
             <img src="assets/headerBoxImage.jpg" alt="close up of a camera lens">
         </div>
+        <h1>captured</h1>
     </header>
 
     <main>
 
-        <section class="about wrapper">
-            <h2>what is captured?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>
-            <button>find out more</button>
+        <section class="about">
+            <div class="aboutContent wrapper">
+                <h2>what is captured?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In et risus nec orci ornare condimentum. Nam suscipit odio lorem, id vestibulum lacus tristique eu. Sed urna ex, porttitor nec iaculis at, consectetur vel turpis. Vestibulum ultricies, felis in lacinia porttitor, tortor metus convallis augue, at fermentum diam erat nec quam. Nulla facilisi.</p>
+                <button>find out more</button>
+            </div>
         </section>
 
         <section class="grid">
@@ -65,53 +69,77 @@
             </section>
         </section>
 
-        <section class="links wrapper">
-            <ul>
-                <li>
-                    <i class="fas fa-camera"></i>
-                    <div>
-                        <a href="#">top picks</a>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-                    </div>
-                </li>
-                <li>
-                    <i class="fas fa-users"></i>
-                    <div>
-                        <a href="#">community</a>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-                    </div>
-                </li>
-                <li>
-                    <i class="fas fa-file"></i>
-                    <div>
-                        <a href="blog.html">blog</a>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-                    </div>
-                </li>
-                <li>
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <a href="contact.html">get in touch</a>
-                        <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
-                    </div>
-                </li>
-            </ul>
+        <section class="links">
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <div>
+                            <span class="fa-stack fa-1.5x">
+                                <i class="fas fa-circle fa-stack-2x iconBackground"></i>
+                                <i class="fas fa-camera fa-stack-1x"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <a href="#">top picks</a>
+                            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fa-stack fa-1.5x">
+                                <i class="fas fa-circle fa-stack-2x iconBackground"></i>
+                                <i class="fas fa-users fa-stack-1x"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <a href="#">community</a>
+                            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fa-stack fa-1.5x">
+                                <i class="fas fa-circle fa-stack-2x iconBackground"></i>
+                                <i class="fas fa-file fa-stack-1x"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <a href="blog.html">blog</a>
+                            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="fa-stack fa-1.5x">
+                                <i class="fas fa-circle fa-stack-2x iconBackground"></i>
+                                <i class="fas fa-phone fa-stack-1x"></i>
+                            </span>
+                        </div>
+                        <div>
+                            <a href="contact.html">get in touch</a>
+                            <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat et.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section class="backgroundImage">
         </section>
 
-        <section class="profile wrapper">
-            <div class="profileLeft">
-                <div>
-                    <img src="assets/smallBox.jpg" alt="">
+        <section class="profile">
+            <div class="wrapper">
+                <div class="profileLeft">
+                    <div>
+                        <img src="assets/smallBox.jpg" alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="profileRight">
-                <div class="profileContent">
-                    <h2>this month profile</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
-                    <button>find out more</button>
+                <div class="profileRight">
+                    <div class="profileContent">
+                        <h2>this month profile</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
+                        <button>find out more</button>
+                    </div>
                 </div>
             </div>
         </section>
