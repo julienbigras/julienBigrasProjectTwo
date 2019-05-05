@@ -1,0 +1,40 @@
+header.headerBlog {
+    background-image: url(../assets/blogHeader.jpg);
+    background-size: cover;
+    height: 80vh;
+}
+
+.blogMain {
+    background-color: $bgColor;
+    @include flexContainer(row, center, flex-start);
+}
+
+.pageLeft {
+    width: 30%;
+    margin: 120px 160px 0 0;
+}
+
+.pageRight {
+    width: calc(70% - 160px);
+    @include position(relative, null, null, 200px, null);
+}
+
+.blogPic {
+        @include boxShadow(-35px, 40px);
+        // position: relative;
+}
+
+.comment {
+    @include flexContainer(column, null, null);
+    .commentPic {
+        width: 20%;
+    }
+    .commentContent {
+        width: 70%;
+    }
+}
+
+footer.blog {
+    height: 30px;
+    background-color: $black;
+}

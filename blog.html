@@ -24,7 +24,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="blogMain">
         <section class="pageLeft">
             <div>
                 <img src="assets/sideBlogImage.jpg" alt="close up shot of a hand gently tossing a lens in the air">
@@ -47,7 +47,7 @@
         </section>
 
         <section class="pageRight">
-            <div>
+            <div class="blogPic">
                 <img src="assets/blogPostImage.jpg" alt="a blonde woman taking a picture while sitting in a field of dandelions at sunrise">
             </div>
             <div class="blogPost">
@@ -59,9 +59,49 @@
                 Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam.<br>
                 In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel justo. Maecenas semper suscipit nunc, sed aliquam.</p>
             </div>
+            <div class="blogComments">
+                <h3>comments:</h3>
+                <div class="comment">
+                    <div class="commentPic">
+                        <img src="assets/comment1.jpg" alt="">
+                    </div>
+                    <div class="commentContent">
+                        <p>Tuesday October 9th, 2018 by Jeremy</p>
+                        <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipusm quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="commentPic">
+                        <img src="assets/comment2.jpg" alt="">
+                    </div>
+                    <div class="commentContent">
+                        <p>Wednesday October 10th, 2018 by Julia</p>
+                        <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollictudin ultrices. Donec
+                        euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu.</p>
+                    </div>
+                </div>
+            </div>
+            <form action="">
+                    
+                <label for="name" class="visuallyHidden"></label>
+                <input type="text" id="name" placeholder="Name">
+                    
+                <label for="emailAddress" class="visuallyHidden"></label>
+                <input type="text" id="emailAddress" placeholder="Email address">
+            
+                <label for="message" class="visuallyHidden"></label>
+                <input type="text" id="message" placeholder="Message">
+                    
+                <label for="submit" class="visuallyHidden"></label>
+                <input type="submit" id="submit" value="submit">
+            </form>
 
         </section>
     </main>
+
+    <footer class="blog">
+
+    </footer>
 
 </body>
 </html>
