@@ -1,3 +1,25 @@
-input[text] {
-    outline: none;
+form {
+    @include flexContainer(column, flex-start, null);
+    padding: 20px 50px;
+}
+
+input[type=text],
+input[type=email] {
+    width: calc(50% - 20px);
+    margin: 20px 0 30px;
+    padding: 10px 0 10px 10px;
+    border: none;
+    border-bottom: 3px solid $fillColor;
+}
+
+textarea {
+    width: 100%;
+    border: 3px solid $fillColor;
+    padding: 10px 0 10px 10px;
+    resize: none;
+}
+
+input[type=submit] {
+    width: 100%;
+    margin: 40px 0;
 }

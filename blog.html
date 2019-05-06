@@ -26,7 +26,7 @@
 
     <main class="blogMain">
         <section class="pageLeft">
-            <div>
+            <div class="aboutPic">
                 <img src="assets/sideBlogImage.jpg" alt="close up shot of a hand gently tossing a lens in the air">
             </div>
             <div>
@@ -38,10 +38,10 @@
             <div class="recentPosts">
                 <h2>recent posts</h2>
                 <ul>
-                    <li>Donec facilisis tortor ut</li>
-                    <li>Augue lacinia at viverra</li>
-                    <li>Semper sed sapien metus</li>
-                    <li>Scelerisque nec pharetra id</li>
+                    <li><a href="#">Donec facilisis tortor ut</a></li>
+                    <li><a href="#">Augue lacinia at viverra</a></li>
+                    <li><a href="#">Semper sed sapien metus</a></li>
+                    <li><a href="#">Scelerisque nec pharetra id</a></li>
                 </ul>
             </div>
         </section>
@@ -81,20 +81,24 @@
                     </div>
                 </div>
             </div>
-            <form action="">
-                    
-                <label for="name" class="visuallyHidden"></label>
-                <input type="text" id="name" placeholder="Name">
-                    
-                <label for="emailAddress" class="visuallyHidden"></label>
-                <input type="text" id="emailAddress" placeholder="Email address">
-            
-                <label for="message" class="visuallyHidden"></label>
-                <input type="text" id="message" placeholder="Message">
-                    
-                <label for="submit" class="visuallyHidden"></label>
-                <input type="submit" id="submit" value="submit">
-            </form>
+
+            <div class="blogForm">
+                <form action="">
+                    <div>
+                        <label for="name" class="visuallyHidden"></label>
+                        <input type="text" id="name" placeholder="Name">
+                            
+                        <label for="emailAddress" class="visuallyHidden"></label>
+                        <input type="text" id="emailAddress" placeholder="Email address">
+                    </div>   
+
+                    <label for="message" class="visuallyHidden"></label>
+                    <textarea name="message" id="message" placeholder="Comment" cols="30" rows="7"></textarea>
+                        
+                    <label for="submit" class="visuallyHidden"></label>
+                    <input type="submit" id="submit" value="Post Comment">
+                </form>
+            </div>
 
         </section>
     </main>

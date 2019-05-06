@@ -29,10 +29,10 @@
     <main class="mainContact">
         <section class="contactInfo">
             <div class="socialIcons">
-                <a><i class="fab fa-facebook-f"></i></a>
-                <a><i class="fab fa-instagram"></i></a>
-                <a><i class="fab fa-twitter"></i></a>
-                <a><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Go to Captures's Facebook page"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Go to Captures's Instagram page"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Go to Captures's Twitter page"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Go to Captures's Whatsapp page"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p>info@email.com</p>
             <p>123 - 456 - 7890</p>
@@ -41,16 +41,21 @@
             <p>M5V 2D5</p>
         </section>
         <section class="contactForm">
-            <form action="" class="contactForm">
+            <form action="">
 
-                <label for="name" class="visuallyHidden"></label>
-                <input type="text" id="name" placeholder="Name">
+                <div>
+                    <label for="name" class="visuallyHidden"></label>
+                    <input type="text" id="name" placeholder="Name">
 
-                <label for="emailAddress" class="visuallyHidden"></label>
-                <input type="text" id="emailAddress" placeholder="Email address">
+                    <label for="emailAddress" class="visuallyHidden"></label>
+                    <input type="email" id="emailAddress" placeholder="Email address">
+                </div>
 
                 <label for="message" class="visuallyHidden"></label>
-                <input type="text" id="message" placeholder="Message">
+                <textarea name="message" id="message" placeholder="Message" cols="30" rows="7"></textarea>
+
+                <!-- <label for="message" class="visuallyHidden"></label>
+                <input type="text" id="message" class="message" placeholder="Message"> -->
 
                 <label for="submit" class="visuallyHidden"></label>
                 <input type="submit" id="submit" value="submit">
@@ -58,7 +63,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="contact">
     </footer>
 
 </body>

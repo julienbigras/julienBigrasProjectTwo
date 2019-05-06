@@ -14,13 +14,20 @@ header.headerContact {
 }
 
 .contactInfo {
-    margin: 10% 60px 10% 0;
+    margin: 8% 60px 8% 0;
 }
 
 .socialIcons {
     @include flexContainer(row, flex-start, center);
     a {
-        padding: 0 20px 15px 0;
+        margin: 0 20px 10px 0;
+        padding-bottom: 5px;
+        color: $black;
+    &:hover,
+    &:focus {
+        border-bottom: 3px solid $fillColor;
+        margin-bottom: 7px;
+        }
     }
 }
 
@@ -30,5 +37,17 @@ header.headerContact {
 }
 
 .contactForm {
+    width: 800px;
     background-color: white;
+    margin-left: 35px;
+    transform: translate(0, -200px);
+    @include boxShadow(-35px, 40px);
+    div {
+        @include flexContainer(row, space-between, center);
+    }
+}
+
+footer.contact {
+    height: 30px;
+    background-color: $black;
 }

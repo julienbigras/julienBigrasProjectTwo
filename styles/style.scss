@@ -21,7 +21,11 @@ h3,
     @include fontSize(1.6rem);
 }
 
-p {
+p,
+input[type=text],
+input[type=email],
+.pageLeft li,
+textarea {
     font-family: "Roboto";
     font-size: 1rem;
     line-height: 1.6rem;
@@ -38,7 +42,6 @@ header.headerHome {
         z-index: 10;
     }
 }
-
 
 .boxImage {
     width: 42.5%;
@@ -57,9 +60,9 @@ header.headerHome {
 
 .aboutContent {
     @include flexContainer(column, center, center);
-        p {
-            padding: 30px 0;
-        }
+    p {
+        padding: 30px 0;
+    }
 }
 
 .skills,
@@ -91,12 +94,19 @@ header.headerHome {
 
 .skillsContent,
 .newGearContent {
-    width: 75%;
-    margin: 0 auto;
-        h3,
-        p {
-            margin-bottom: 30px;
-        }
+    width: 70%;
+    h3,
+    p {
+        margin-bottom: 30px;
+    }
+}
+
+.skillsContent {
+    margin-right: 10%;
+}
+
+.newGearContent {
+    margin-left: 10%;
 }
 
 .newGearContent div {
@@ -150,6 +160,7 @@ header.headerHome {
 .backgroundImage {
     background-image: url(../assets/banner.jpg);
     background-size: cover;
+    background-position: center;
     height: 70vh;
 }
 
@@ -191,8 +202,8 @@ header.headerHome {
 
 footer {
     background: $black;
-        p {
-            color: white;
-            text-align: center;
-        }
+    p {
+        color: white;
+        text-align: center;
+    }
 }

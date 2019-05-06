@@ -14,37 +14,95 @@ header.headerBlog {
 }
 
 .pageLeft {
-    width: 30%;
-    margin: 120px 160px 0 0;
+    width: 25%;
+    margin: 90px 80px 0 80px;
+    padding: 0 10px 20px;
+    background-color: white;
+    h2 {
+        font-size: 1.2rem;
+        margin: 20px 0;
+    }
+    p {
+        padding-right: 15px;
+    }
+}
+
+.aboutPic {
+    margin-left: -90px;
+    transform: translate(-10px, -20px);
+}
+
+.recentPosts ul li {
+    list-style-type: disc;
+    color: $fillColor;
+    margin-left: 10px;
+    a {
+        color: $black;
+    }
 }
 
 .pageRight {
-    width: calc(70% - 160px);
-    @include position(relative, null, null, 200px, null);
+    width: calc(75% - 160px);
+    margin-top: -200px;
+    .blogPic {
+        @include boxShadow(-35px, 40px);
+        }
     .blogPost {
         border-left: 5px solid $shadowColor;
         border-bottom: 5px solid $shadowColor;
         padding-left: 35px;
         margin-right: 60px;
+        margin-left: -35px;
         h2 {
         padding-top: 60px;
+        }
+        p:first-of-type {
+            padding-bottom: 40px;
+        }
+        p:last-of-type {
+            padding-bottom: 10px;
         }
     }
 }
 
-.blogPic {
-        @include boxShadow(-35px, 40px);
-        // position: relative;
+.blogPost,
+.blogComments,
+.blogForm {
+    margin-right: 8%;
+}
+
+.blogComments h3 {
+    margin: 40px 0;
 }
 
 .comment {
-    @include flexContainer(column, center, null);
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 7.5%;
     .commentPic {
-        width: 20%;
+        width: 12.5%;
     }
     .commentContent {
-        width: 70%;
+        width: 87.5%;
+        margin: 0 40px;
+        p:first-child {
+            margin-bottom: 15px;
+            line-height: 1rem;
+        }
     }
+}
+
+.blogForm form {
+    padding: 0;
+}
+
+.blogForm input,
+.blogForm textarea {
+    background-color: $bgColor;
+}
+
+.blogForm div {
+    @include flexContainer(row, space-between, center);
 }
 
 footer.blog {

@@ -1,11 +1,12 @@
-button {
+button,
+input[type=submit] {
     font-family: "Playfair Display";
     text-transform: uppercase;
     font-weight: bold;
     font-style: italic;
     font-size: 20px;
     background-color: $fillColor;
-    color: black;
+    color: $black;
     border: none;
     padding: 12px 18px;
     display: block;
