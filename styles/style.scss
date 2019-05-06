@@ -2,23 +2,14 @@
 @import "partials/generalStyles";
 @import "partials/mixins";
 @import "partials/blogStyles";
+@import "partials/contactStyles";
 @import "partials/nav";
 @import "partials/button";
-
-header.headerHome {
-    background-image: url(../assets/headerImage.jpg);
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
+@import "partials/form";
 
 h1 {
     @include fontSize(6.9rem);
     text-align: center;
-}
-
-.headerHome h1 {
-    margin-top: 60vh;
 }
 
 h2 {
@@ -37,15 +28,24 @@ p {
     color: $black;
 }
 
+header.headerHome {
+    background-image: url(../assets/headerImage.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    h1 {
+        @include position(absolute, 65%, 0, null, 0);
+        z-index: 10;
+    }
+}
+
+
 .boxImage {
-    width: 35%;
-    position: absolute;
-    right: 0;
-    bottom: -120px;
+    width: 42.5%;
+    @include position(relative, 30%, 0, null, 57.5%);
     border-top: 30px solid $shadowColor;
     border-bottom: 30px solid $shadowColor;
     border-left: 30px solid $shadowColor;
-    z-index: 10;
 }
 
 .about {

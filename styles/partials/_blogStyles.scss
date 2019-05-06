@@ -2,6 +2,10 @@ header.headerBlog {
     background-image: url(../assets/blogHeader.jpg);
     background-size: cover;
     height: 80vh;
+    h1 {
+        font-size: 6rem;
+        margin-top: 8%;
+    }
 }
 
 .blogMain {
@@ -17,6 +21,15 @@ header.headerBlog {
 .pageRight {
     width: calc(70% - 160px);
     @include position(relative, null, null, 200px, null);
+    .blogPost {
+        border-left: 5px solid $shadowColor;
+        border-bottom: 5px solid $shadowColor;
+        padding-left: 35px;
+        margin-right: 60px;
+        h2 {
+        padding-top: 60px;
+        }
+    }
 }
 
 .blogPic {
@@ -25,7 +38,7 @@ header.headerBlog {
 }
 
 .comment {
-    @include flexContainer(column, null, null);
+    @include flexContainer(column, center, null);
     .commentPic {
         width: 20%;
     }

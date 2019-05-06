@@ -1,0 +1,34 @@
+header.headerContact {
+    background-image: url(../assets/contactHeader.jpg);
+    background-size: cover;
+    height: 75vh;
+    h1 {
+        font-size: 3.8rem;
+        margin-top: 8%;
+    }
+}
+
+.mainContact {
+    @include flexContainer(row, center, center);
+    background-color: $bgColor;
+}
+
+.contactInfo {
+    margin: 10% 60px 10% 0;
+}
+
+.socialIcons {
+    @include flexContainer(row, flex-start, center);
+    a {
+        padding: 0 20px 15px 0;
+    }
+}
+
+.contactInfo p:first-of-type {
+        @include fontSize(1rem);
+        padding-bottom: 15px;
+}
+
+.contactForm {
+    background-color: white;
+}
