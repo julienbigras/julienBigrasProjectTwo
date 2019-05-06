@@ -569,8 +569,7 @@ header.headerHome {
 
 .skillsLeft div,
 .newGearRight div {
-  width: 90%;
-  position: relative; }
+  width: 90%; }
 
 .skillsRight,
 .newGearLeft {
@@ -621,7 +620,9 @@ header.headerHome {
 .skillsLeft div {
   -webkit-box-shadow: 35px 40px #FDFA69;
   box-shadow: 35px 40px #FDFA69;
-  bottom: 40px; }
+  -webkit-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-40px); }
 
 .newGearRight {
   display: -webkit-box;
@@ -641,7 +642,9 @@ header.headerHome {
 .newGearRight div {
   -webkit-box-shadow: -35px 40px #FDFA69;
   box-shadow: -35px 40px #FDFA69;
-  top: 40px; }
+  -webkit-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  transform: translateY(40px); }
 
 .links {
   background: #EFFDF3;
@@ -682,11 +685,10 @@ header.headerHome {
   height: 70vh; }
 
 .profile {
-  background: #EFFDF3; }
-  .profile .wrapper {
-    height: 70vh; }
-    .profile .wrapper p {
-      padding: 20px 0 40px; }
+  background: #EFFDF3;
+  padding: 5% 0; }
+  .profile p {
+    padding: 20px 0 40px; }
 
 .profile .wrapper,
 .profileLeft,
@@ -738,3 +740,17 @@ footer {
   footer p {
     color: white;
     text-align: center; }
+
+@media (max-width: 1400px) {
+  h1 {
+    font-size: 6rem; } }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90%; }
+  .skillsContent {
+    margin-right: 5%; }
+  .newGearContent {
+    margin-left: 5%; }
+  .backgroundImage {
+    height: 50vh; } }

@@ -84,7 +84,6 @@ header.headerHome {
 .skillsLeft div,
 .newGearRight div {
     width: 90%;
-    position: relative;
 }
 
 .skillsRight,
@@ -115,7 +114,7 @@ header.headerHome {
 
 .skillsLeft div {
     @include boxShadow(35px, 40px);
-    bottom: 40px;
+    transform: translateY(-40px);
 }
 
 .newGearRight {
@@ -124,15 +123,15 @@ header.headerHome {
 
 .newGearRight div {
     @include boxShadow(-35px, 40px)
-    top: 40px;
+    transform: translateY(40px);
 }
 
 .links {
     background: $bgColor;
     padding: 70px 0 40px;
-        ul div {
-            margin-right: 10px;
-        }
+    ul div {
+        margin-right: 10px;
+    }
 }
 
 .links ul {
@@ -166,11 +165,9 @@ header.headerHome {
 
 .profile {
     background: $bgColor;
-    .wrapper {
-        height: 70vh;
-        p {
-            padding: 20px 0 40px;
-        }
+    padding: 5% 0;
+    p {
+        padding: 20px 0 40px;
     }
 }
 
@@ -205,5 +202,31 @@ footer {
     p {
         color: white;
         text-align: center;
+    }
+}
+
+// HOME PAGE MEDIA QUERIES
+
+@media (max-width: 1400px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .skillsContent {
+        margin-right: 5%;
+    }
+
+    .newGearContent {
+        margin-left: 5%;
+    }
+
+    .backgroundImage {
+        height: 50vh;
     }
 }
