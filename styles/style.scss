@@ -22,9 +22,9 @@ h3,
 }
 
 p,
+.pageLeft li,
 input[type=text],
 input[type=email],
-.pageLeft li,
 textarea {
     font-family: "Roboto";
     font-size: 1rem;
@@ -180,9 +180,9 @@ header.headerHome {
 
 .profileLeft {
     width: 25%;
-        div {
-            @include boxShadow(35px, 40px);
-        }
+    div {
+        @include boxShadow(35px, 40px);
+    }
 }
 
 .profileRight {
@@ -192,9 +192,9 @@ header.headerHome {
 
 .gallery ul {
     @include flexContainer(row, space-between, center);
+    padding: 40px 0;
         li {
             width: calc(33% - 20px);
-            padding: 40px 0;
     }
 }
 
@@ -228,6 +228,25 @@ footer {
     .wrapper {
         width: 90%;
     }
+    
+    header.headerHome h1 {
+        font-size: 5rem;
+        @include position(absolute, 70%, 0, 0, 10%);
+        &::after {
+            content: "";
+            height: 50%;
+            width: 400px;
+            background-color: rgba(253, 250, 105, 0.85);
+            z-index: -1;
+            position: absolute;
+            left: 5%;
+            bottom: 42.5%;
+        }
+    }
+
+    .boxImage {
+        display: none;
+    }
 
     .skillsContent {
         margin-right: 5%;
@@ -257,33 +276,55 @@ footer {
     }
 }
 
-// @media (max-width: 1040px) {
-//     .skillsLeft,
-//     .newGearRight {
-//         @include flexContainer(column, center, center);
-//     }
+@media (max-width: 1040px) {
+    .skills,
+    .newGear {
+        @include flexContainer(column, center, center);
+    }
 
-//     .skillsContent,
-//     .newGearContent {
-//         width: 80%;
-//         h3,
-//         p, 
-//         button {
-//             margin-bottom: 15px;
-//         }
-//         p {
-//             font-size: 0.9rem;
-//         }
-//         h3 {
-//             font-size: 1.2rem;
-//         }
-//     }
-// }
+    .skillsLeft,
+    .newGearRight {
+        width: 80%;
+    }
+
+    .skillsRight,
+    .newGearLeft {
+        width: 95%;
+    }
+
+    .skillsContent,
+    .newGearContent {
+        margin: 5% 0;
+        text-align: center;
+        button {
+            margin: 0;
+        }
+    }
+
+    .newGearRight div {
+        @include boxShadow(-15px, 15px);
+        transform: none;
+    }
+
+    .newGearContent div,
+    .skillsContent div {
+        @include flexContainer(row, center, center);
+    }
+}
 
 @media (max-width: 845px) {
+
+    header.headerHome h1 {
+        font-size: 4rem;
+        @include position(absolute, 70%, 0, 0, 10%);
+        &::after {
+            left: 0;
+            bottom: 42.5%;
+        }
+    }
+
     .backgroundImage {
         height: 50vh;
-        background-position: 40%;
     }
 
     .links {
@@ -313,6 +354,27 @@ footer {
         }
         .center {
             @include flexContainer(row, center, center);
+        }
+    }
+
+    .gallery ul li {
+        width: calc(50% - 10px);
+    }
+
+    .gallery ul li:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header.headerHome h1 {
+        font-size: 2.8rem;
+        @include position(absolute, 70%, 0, 0, 0);
+        &::after {
+            height: 35%;
+            width: 90%;
+            left: 8%;
+            bottom: 65%;
         }
     }
 }
