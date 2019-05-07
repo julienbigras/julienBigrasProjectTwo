@@ -221,7 +221,7 @@ header.headerBlog {
 .recentPosts ul li {
   list-style-type: disc;
   color: #4CEEA7;
-  margin-left: 10px; }
+  margin-left: 20px; }
   .recentPosts ul li a {
     color: #2C2C2C; }
 
@@ -592,8 +592,10 @@ header.headerHome {
   width: 70%; }
   .skillsContent h3,
   .skillsContent p,
+  .skillsContent button,
   .newGearContent h3,
-  .newGearContent p {
+  .newGearContent p,
+  .newGearContent button {
     margin-bottom: 30px; }
 
 .skillsContent {
@@ -742,8 +744,20 @@ footer {
     text-align: center; }
 
 @media (max-width: 1400px) {
-  h1 {
-    font-size: 6rem; } }
+  header.headerHome h1 {
+    font-size: 5.5rem;
+    position: absolute;
+    top: 70%;
+    right: 0;
+    left: 0; }
+  .boxImage {
+    width: 37.5%;
+    position: relative;
+    top: 50%;
+    right: 0;
+    left: 62.5%; }
+  .about {
+    height: 80vh; } }
 
 @media (max-width: 1200px) {
   .wrapper {
@@ -753,4 +767,45 @@ footer {
   .newGearContent {
     margin-left: 5%; }
   .backgroundImage {
-    height: 50vh; } }
+    height: 50vh; }
+  .skillsLeft div,
+  .newGearRight div {
+    width: 100%; }
+  .skillsLeft div {
+    -webkit-box-shadow: 15px 15px #FDFA69;
+    box-shadow: 15px 15px #FDFA69;
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px); }
+  .newGearRight div {
+    -webkit-box-shadow: -15px 15px #FDFA69;
+    box-shadow: -15px 15px #FDFA69;
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    transform: translateY(15px); } }
+
+@media (max-width: 845px) {
+  .backgroundImage {
+    height: 50vh;
+    background-position: 40%; }
+  .links {
+    padding: 20px 0; }
+    .links ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .links ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%; } }
