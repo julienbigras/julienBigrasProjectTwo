@@ -252,7 +252,7 @@ header.headerBlog {
 .blogComments h3 {
   margin: 40px 0; }
 
-.comment {
+.blogComments li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,12 +260,12 @@ header.headerBlog {
   -ms-flex-align: start;
   align-items: flex-start;
   margin-bottom: 7.5%; }
-  .comment .commentPic {
+  .blogComments li .commentPic {
     width: 12.5%; }
-  .comment .commentContent {
+  .blogComments li .commentContent {
     width: 87.5%;
     margin: 0 40px; }
-    .comment .commentContent p:first-child {
+    .blogComments li .commentContent p:first-child {
       margin-bottom: 15px;
       line-height: 1rem; }
 
@@ -321,8 +321,16 @@ header.headerContact {
 
 .contactInfo {
   margin: 8% 60px 8% 0; }
+  .contactInfo p:first-of-type {
+    font-size: 1rem;
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-style: italic;
+    color: #2C2C2C;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
 
-.socialIcons {
+.contactInfo ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,22 +344,14 @@ header.headerContact {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .socialIcons a {
+  .contactInfo ul li {
     margin: 0 20px 10px 0;
-    padding-bottom: 5px;
-    color: #2C2C2C; }
-    .socialIcons a:hover, .socialIcons a:focus {
+    padding-bottom: 5px; }
+    .contactInfo ul li a {
+      color: #2C2C2C; }
+    .contactInfo ul li:hover, .contactInfo ul li:focus {
       border-bottom: 3px solid #4CEEA7;
       margin-bottom: 7px; }
-
-.contactInfo p:first-of-type {
-  font-size: 1rem;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-style: italic;
-  color: #2C2C2C;
-  text-transform: uppercase;
-  padding-bottom: 15px; }
 
 .contactForm {
   width: 800px;
@@ -515,7 +515,7 @@ header.headerHome {
 .boxImage {
   width: 42.5%;
   position: relative;
-  top: 30%;
+  top: 27.5%;
   right: 0;
   left: 57.5%;
   border-top: 30px solid #FDFA69;
@@ -719,7 +719,7 @@ header.headerHome {
   width: 70%;
   padding-left: 10%; }
 
-.gallery {
+.gallery ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -733,7 +733,7 @@ header.headerHome {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .gallery div {
+  .gallery ul li {
     width: calc(33% - 20px);
     padding: 40px 0; }
 
@@ -743,7 +743,7 @@ footer {
     color: white;
     text-align: center; }
 
-@media (max-width: 1400px) {
+@media (max-width: 1340px) {
   header.headerHome h1 {
     font-size: 5.5rem;
     position: absolute;
@@ -753,7 +753,7 @@ footer {
   .boxImage {
     width: 37.5%;
     position: relative;
-    top: 50%;
+    top: 40%;
     right: 0;
     left: 62.5%; }
   .about {
@@ -808,4 +808,40 @@ footer {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        width: 100%; } }
+        width: 100%; }
+  .profile .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .profile .wrapper .profileLeft {
+      width: 100%; }
+    .profile .wrapper .profileRight {
+      width: 100%;
+      padding: 0;
+      margin-top: 7.5%; }
+      .profile .wrapper .profileRight h2 {
+        text-align: center; }
+    .profile .wrapper .center {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }

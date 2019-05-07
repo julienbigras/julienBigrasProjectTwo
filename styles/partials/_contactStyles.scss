@@ -15,25 +15,26 @@ header.headerContact {
 
 .contactInfo {
     margin: 8% 60px 8% 0;
-}
-
-.socialIcons {
-    @include flexContainer(row, flex-start, center);
-    a {
-        margin: 0 20px 10px 0;
-        padding-bottom: 5px;
-        color: $black;
-    &:hover,
-    &:focus {
-        border-bottom: 3px solid $fillColor;
-        margin-bottom: 7px;
-        }
+    p:first-of-type {
+        @include fontSize(1rem);
+        padding-bottom: 15px;
     }
 }
 
-.contactInfo p:first-of-type {
-        @include fontSize(1rem);
-        padding-bottom: 15px;
+.contactInfo ul {
+    @include flexContainer(row, flex-start, center);
+    li {
+        margin: 0 20px 10px 0;
+        padding-bottom: 5px;
+        a {
+            color: $black;
+        }     
+        &:hover,
+        &:focus {
+            border-bottom: 3px solid $fillColor;
+            margin-bottom: 7px;
+        }
+    }
 }
 
 .contactForm {

@@ -45,7 +45,7 @@ header.headerHome {
 
 .boxImage {
     width: 42.5%;
-    @include position(relative, 30%, 0, null, 57.5%);
+    @include position(relative, 27.5%, 0, null, 57.5%);
     border-top: 30px solid $shadowColor;
     border-bottom: 30px solid $shadowColor;
     border-left: 30px solid $shadowColor;
@@ -190,9 +190,9 @@ header.headerHome {
     padding-left: 10%;
 }
 
-.gallery {
+.gallery ul {
     @include flexContainer(row, space-between, center);
-        div {
+        li {
             width: calc(33% - 20px);
             padding: 40px 0;
     }
@@ -208,7 +208,7 @@ footer {
 
 // HOME PAGE MEDIA QUERIES
 
-@media (max-width: 1400px) {
+@media (max-width: 1340px) {
     header.headerHome h1 {
         font-size: 5.5rem;
         @include position(absolute, 70%, 0, null, 0);
@@ -216,7 +216,7 @@ footer {
 
     .boxImage {
         width: 37.5%;
-        @include position(relative, 50%, 0, null, 62.5%);
+        @include position(relative, 40%, 0, null, 62.5%);
     }
 
     .about {
@@ -257,6 +257,29 @@ footer {
     }
 }
 
+// @media (max-width: 1040px) {
+//     .skillsLeft,
+//     .newGearRight {
+//         @include flexContainer(column, center, center);
+//     }
+
+//     .skillsContent,
+//     .newGearContent {
+//         width: 80%;
+//         h3,
+//         p, 
+//         button {
+//             margin-bottom: 15px;
+//         }
+//         p {
+//             font-size: 0.9rem;
+//         }
+//         h3 {
+//             font-size: 1.2rem;
+//         }
+//     }
+// }
+
 @media (max-width: 845px) {
     .backgroundImage {
         height: 50vh;
@@ -271,6 +294,25 @@ footer {
                 display: flex;
                 width: 100%;
             }
+        }
+    }
+
+    .profile .wrapper {
+        @include flexContainer(column, center, center);
+        .profileLeft {
+            width: 100%;
+            
+        }
+        .profileRight {
+            width: 100%;
+            padding: 0;
+            margin-top: 7.5%;
+            h2 {
+                text-align: center;
+            }
+        }
+        .center {
+            @include flexContainer(row, center, center);
         }
     }
 }
