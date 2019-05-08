@@ -13,11 +13,15 @@ header.headerBlog {
     @include flexContainer(row, center, flex-start);
 }
 
-.pageLeft {
+aside {
     width: 25%;
     margin: 90px 80px 0 80px;
     padding: 0 10px 20px;
     background-color: white;
+    .aboutPic {
+        margin-left: -90px;
+        transform: translate(-10px, -20px);
+    }
     h2 {
         font-size: 1.2rem;
         margin: 20px 0;
@@ -27,12 +31,11 @@ header.headerBlog {
     }
 }
 
-.aboutPic {
-    margin-left: -90px;
-    transform: translate(-10px, -20px);
-}
-
 .recentPosts ul li {
+    font-family: "Roboto";
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: $black;
     list-style-type: disc;
     color: $fillColor;
     margin-left: 20px;
@@ -51,7 +54,6 @@ header.headerBlog {
         border-left: 5px solid $shadowColor;
         border-bottom: 5px solid $shadowColor;
         padding-left: 35px;
-        margin-right: 60px;
         margin-left: -35px;
         h2 {
         padding-top: 60px;
@@ -94,13 +96,88 @@ header.headerBlog {
 
 .blogForm form {
     padding: 0;
+    input[type=text],
+    input[type=email],
+    textarea {
+        background-color: $bgColor;
+    }
+    div {
+        @include flexContainer(row, space-between, center);
+    }
 }
 
-.blogForm input,
-.blogForm textarea {
-    background-color: $bgColor;
+// MEDIA QUERIES
+
+@media (max-width: 1040px) {
+    // .headerBlog h1 {
+    //     font-size: 5rem;
+    // }
+
+    .blogMain {
+        @include flexContainer(column-reverse, center, center);
+    }
+
+    aside {
+        width: 100%;
+        margin: 0 auto;
+        // padding: 0 10px 20px;
+        @include flexContainer(row, center, center);
+        flex-wrap: wrap;
+        .aboutPic {
+            width: 50%;
+            margin: 0 auto;
+            transform: none;
+        }
+        // .about {
+        //     width: 50%;
+        // }
+        p {
+            padding: 0;
+        }
+    }
+
+    .pageRight {
+        width: 90%;
+        .blogPic {
+            @include boxShadow(-15px, 15px);
+        }
+        .blogPost {
+            padding-left: 10px;
+            margin-right: 0;
+            margin-left: -15px;
+        }
+        .blogComments,
+        .blogForm {
+            margin-right: 0;
+        }
+    }
 }
 
-.blogForm div {
-    @include flexContainer(row, space-between, center);
+@media (max-width: 845px) {
+    .blogComments li {
+        @include flexContainer(column, flex-start, center);
+        margin-bottom: 30px;
+        .commentPic {
+            width: 30%;
+            min-width: 150px;
+            margin-bottom: 5%;
+        }
+        .commentContent {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .blogForm form {
+        div {
+            @include flexContainer(column, center, center);
+        }
+        input[type=text],
+        input[type=email] {
+            width: 100%;
+            margin: 0 0 20px;
+        }
+    }
 }
