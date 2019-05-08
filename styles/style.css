@@ -210,22 +210,43 @@ nav ul {
   nav ul a:focus {
     border-bottom: 3px solid #4CEEA7; }
 
-.fa-bars {
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  font-size: 2rem;
-  visibility: hidden; }
-
 @media (max-width: 1040px) {
   nav ul a {
     margin-left: 20px; } }
 
 @media (max-width: 845px) {
-  nav {
-    visibility: hidden; }
-  .fa-bars {
-    visibility: visible; } }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(253, 250, 105, 0.85);
+    padding: 10px;
+    margin: 0; }
+    nav ul li {
+      margin-bottom: 5px; }
+    nav ul a {
+      margin: 0;
+      padding: 0 0 3px 0; } }
+
+@media (max-width: 650px) {
+  nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px; } }
 
 button,
 input[type=submit] {
@@ -341,11 +362,11 @@ aside {
   list-style-type: disc;
   color: #4CEEA7;
   margin-left: 20px;
-  padding-bottom: 3px; }
+  margin-bottom: 5px; }
   .recentPosts ul li a {
     color: #2C2C2C; }
-  .recentPosts ul li:hover, .recentPosts ul li:focus {
-    border-bottom: 3px solid #4CEEA7; }
+    .recentPosts ul li a:hover, .recentPosts ul li a:focus {
+      border-bottom: 3px solid #4CEEA7; }
 
 .pageRight {
   width: calc(75% - 160px);
@@ -477,6 +498,8 @@ aside {
       margin-right: 0; } }
 
 @media (max-width: 845px) {
+  header.headerBlog h1 {
+    margin-top: 20%; }
   .blogPost h2 {
     font-size: 1.8rem; }
   .blogComments li {
@@ -505,7 +528,7 @@ aside {
 @media (max-width: 650px) {
   header.headerBlog h1 {
     font-size: 4rem;
-    margin-top: 12%; }
+    margin-top: 25%; }
   .pageRight .blogPost {
     border: none;
     padding-left: 0;
@@ -554,7 +577,7 @@ aside {
 @media (max-width: 480px) {
   header.headerBlog h1 {
     font-size: 3rem;
-    margin-top: 25%; } }
+    margin-top: 50%; } }
 
 header.headerContact {
   background-image: url(../assets/contactHeader.jpg);
@@ -690,7 +713,7 @@ header.headerContact {
 @media (max-width: 1040px) {
   header.headerContact h1 {
     font-size: 2.8rem;
-    margin: 12% 0 0 20%; } }
+    margin: 20% 0 0 20%; } }
 
 @media (max-width: 845px) {
   .mainContact .contactInfo {
@@ -722,7 +745,7 @@ header.headerContact {
 @media (max-width: 650px) {
   header.headerContact h1 {
     font-size: 2.5rem;
-    margin: 12% 0 0 30%; }
+    margin: 45% 0 0 30%; }
   .mainContact .contactForm {
     width: 100%;
     -webkit-box-shadow: none;
@@ -879,7 +902,8 @@ header.headerHome {
 
 .skillsContent,
 .newGearContent {
-  width: 70%; }
+  width: 70%;
+  max-width: 500px; }
   .skillsContent h3,
   .skillsContent p,
   .skillsContent button,

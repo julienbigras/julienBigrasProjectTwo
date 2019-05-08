@@ -16,13 +16,13 @@ nav ul {
     }
 }
 
-.fa-bars {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    font-size: 2rem;
-    visibility: hidden;
-}
+// .fa-bars {
+//     position: absolute;
+//     top: 25px;
+//     left: 25px;
+//     font-size: 2rem;
+//     visibility: hidden;
+// }
 
 // MEDIA QUERIES FOR NAV BAR
 
@@ -33,11 +33,35 @@ nav ul {
 }
 
 @media (max-width: 845px) {
-    nav {
-        visibility: hidden;
-    }
-
-    .fa-bars {
-        visibility: visible;
+    nav ul {
+        @include flexContainer(column, flex-start, flex-start);
+        @include position(absolute, 0, 0, null, null);
+        background-color: rgba(253, 250, 105, 0.85);
+        padding: 10px;
+        margin: 0;
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            margin: 0;
+            padding: 0 0 3px 0;
+        }
     }
 }
+
+@media (max-width: 650px) {
+    nav ul {
+        @include position(absolute, 0, null, null, 0);
+        width: 120px;
+    }
+}
+
+// @media (max-width: 845px) {
+//     nav{
+//         visibility: hidden;
+//     }
+
+//     .fa-bars {
+//         visibility: visible;
+//     }
+// }

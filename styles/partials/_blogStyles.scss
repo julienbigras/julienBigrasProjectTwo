@@ -39,13 +39,13 @@ aside {
     list-style-type: disc;
     color: $fillColor;
     margin-left: 20px;
-    padding-bottom: 3px;
+    margin-bottom: 5px;
     a {
         color: $black;
-    }
-    &:hover,
-    &:focus {
+        &:hover,
+        &:focus {
         border-bottom: 3px solid $fillColor;
+        }
     }
 }
 
@@ -167,6 +167,10 @@ aside {
 }
 
 @media (max-width: 845px) {
+    header.headerBlog h1 {
+        margin-top: 20%;
+    }
+
     .blogPost h2 {
         font-size: 1.8rem;
     }
@@ -189,7 +193,7 @@ aside {
 @media (max-width: 650px) {
     header.headerBlog h1 {
         font-size: 4rem;
-        margin-top: 12%;
+        margin-top: 25%;
     }
 
     .pageRight .blogPost {
@@ -226,6 +230,6 @@ aside {
 @media (max-width: 480px) {
     header.headerBlog h1 {
         font-size: 3rem;
-        margin-top: 25%;
+        margin-top: 50%;
     }
 }
