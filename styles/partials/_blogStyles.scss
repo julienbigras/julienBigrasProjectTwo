@@ -104,8 +104,3 @@ header.headerBlog {
 .blogForm div {
     @include flexContainer(row, space-between, center);
 }
-
-footer.blog {
-    height: 30px;
-    background-color: $black;
-}

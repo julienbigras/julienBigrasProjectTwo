@@ -47,8 +47,3 @@ header.headerContact {
         @include flexContainer(row, space-between, center);
     }
 }
-
-footer.contact {
-    height: 30px;
-    background-color: $black;
-}

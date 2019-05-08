@@ -16,13 +16,28 @@ nav ul {
     }
 }
 
+.fa-bars {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 2rem;
+    visibility: hidden;
+}
+
 // MEDIA QUERIES FOR NAV BAR
 
-@media (max-width: 1200px) {
-    nav ul {
-        @include flexContainer(column, flex-start, flex-start);
-        li {
-            margin: 0 0 10px;
-        }
+@media (max-width: 1040px) {
+    nav ul a {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 845px) {
+    nav {
+        visibility: hidden;
+    }
+
+    .fa-bars {
+        visibility: visible;
     }
 }

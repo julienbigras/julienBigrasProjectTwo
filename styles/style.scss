@@ -1,11 +1,11 @@
 @import "partials/setup";
 @import "partials/generalStyles";
 @import "partials/mixins";
-@import "partials/blogStyles";
-@import "partials/contactStyles";
 @import "partials/nav";
 @import "partials/button";
 @import "partials/form";
+@import "partials/blogStyles";
+@import "partials/contactStyles";
 
 h1 {
     @include fontSize(6.9rem);
@@ -38,28 +38,28 @@ header.headerHome {
     height: 100vh;
     position: relative;
     h1 {
-        @include position(absolute, 65%, 0, null, 0);
+        @include position(absolute, 70%, 0, 0, 0);
         z-index: 10;
     }
-}
-
-.boxImage {
-    width: 42.5%;
-    @include position(relative, 27.5%, 0, null, 57.5%);
-    border-top: 30px solid $shadowColor;
-    border-bottom: 30px solid $shadowColor;
-    border-left: 30px solid $shadowColor;
+    .boxImage {
+        width: 42.5%;
+        @include position(relative, 27.5%, 0, null, 57.5%);
+        border-top: 30px solid $shadowColor;
+        border-bottom: 30px solid $shadowColor;
+        border-left: 30px solid $shadowColor;
+    }
 }
 
 .about {
     background: $bgColor;
-    height: 100vh;
+    // height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .aboutContent {
     @include flexContainer(column, center, center);
+    margin: 15% auto;
     p {
         padding: 30px 0;
     }
@@ -153,6 +153,11 @@ header.headerHome {
     margin-top: 10px;
 }
 
+.links a:hover,
+.links a:focus {
+    border-bottom: 3px solid $fillColor;
+}
+
 .iconBackground {
     color: $fillColor;
 }
@@ -214,13 +219,9 @@ footer {
         @include position(absolute, 70%, 0, null, 0);
     }
 
-    .boxImage {
+    header.headerHome .boxImage {
         width: 37.5%;
         @include position(relative, 40%, 0, null, 62.5%);
-    }
-
-    .about {
-        height: 80vh;
     }
 }
 
@@ -235,7 +236,7 @@ footer {
         &::after {
             content: "";
             height: 50%;
-            width: 400px;
+            width: 65%;
             background-color: rgba(253, 250, 105, 0.85);
             z-index: -1;
             position: absolute;
@@ -244,7 +245,7 @@ footer {
         }
     }
 
-    .boxImage {
+    header.headerHome .boxImage {
         display: none;
     }
 
@@ -318,8 +319,9 @@ footer {
         font-size: 4rem;
         @include position(absolute, 70%, 0, 0, 10%);
         &::after {
+            height: 40%;
             left: 0;
-            bottom: 42.5%;
+            bottom: 57%;
         }
     }
 
@@ -341,8 +343,7 @@ footer {
     .profile .wrapper {
         @include flexContainer(column, center, center);
         .profileLeft {
-            width: 100%;
-            
+            width: 100%;    
         }
         .profileRight {
             width: 100%;
@@ -363,6 +364,21 @@ footer {
 
     .gallery ul li:nth-child(3) {
         display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .gallery ul {
+        @include flexContainer(column, space-between, center);
+        padding: 0 0 20px 0;
+        li {
+            width: 100%;
+            margin: 20px 20px 0 20px;
+        }
+    }
+    
+    .gallery ul li:nth-child(3) {
+        display: block;
     }
 }
 
