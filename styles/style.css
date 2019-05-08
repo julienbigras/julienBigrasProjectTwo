@@ -643,6 +643,11 @@ header.headerContact {
     -ms-flex-align: center;
     align-items: center; }
 
+@media (max-width: 1400px) {
+  header.headerContact h1 {
+    font-size: 3.2rem;
+    margin-left: 25%; } }
+
 @media (max-width: 1200px) {
   .mainContact {
     display: -webkit-box;
@@ -681,6 +686,11 @@ header.headerContact {
       -ms-transform: translate(0, -140px);
       transform: translate(0, -140px); } }
 
+@media (max-width: 1040px) {
+  header.headerContact h1 {
+    font-size: 2.8rem;
+    margin: 12% 0 0 50%; } }
+
 @media (max-width: 845px) {
   .mainContact .contactInfo {
     display: -webkit-box;
@@ -707,6 +717,11 @@ header.headerContact {
     width: 90%;
     -webkit-box-shadow: -15px 15px #FDFA69;
     box-shadow: -15px 15px #FDFA69; } }
+
+@media (max-width: 725px) {
+  header.headerContact h1 {
+    font-size: 2.5rem;
+    margin: 12% 50% 0 0; } }
 
 @media (max-width: 650px) {
   .mainContact .contactForm {
